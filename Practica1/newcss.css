@@ -1,0 +1,25 @@
+div div{
+    width: 50px;
+    border: 5px solid;
+    display: inline-block;
+    height: 50px;
+    border-radius: 50px;
+    background-color: blue;
+}
+.confirmar{
+    padding: 15px;
+    border: 1px solid;
+}
+
+.valor1{
+    background-color: blue;
+}
+.valor2{
+    background-color: white;
+}
+.valor3{
+    background-color: black;
+}
+.valor4{
+    background-color: yellow;
+}
