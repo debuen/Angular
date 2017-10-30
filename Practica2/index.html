@@ -28,14 +28,16 @@
                 </select>
             </div>
             <div>
-                Director: {{mostrarPelicula[numPeli][2]}}
-                Nombre: {{mostrarPelicula[numPeli][1]}}
-                Año: {{mostrarPelicula[numPeli][3]}}
+                Director: {{peliculas[numPeli][2]}}
+                Nombre: {{peliculas[numPeli][1]}}
+                Año: {{peliculas[numPeli][3]}}
             </div>
             <table border="1">
-                <tr ng-repeat="peli in mostrarPelicula[0] track by $index">
+                <tr ng-repeat="peli in peliculas[numPeli][0] track by $index">
                     <td>{{peli[0]}}</td>
-                    <td>{{peli[1]}}</td>   
+                    <td>{{peli[1]}}</td>
+                    <td>{{peli[2]}}</td>  
+                    <td>{{peli[3]}}</td>  
                 </tr>
             </table>
         </div>
