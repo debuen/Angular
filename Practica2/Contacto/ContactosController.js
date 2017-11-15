@@ -1,7 +1,7 @@
 angular.module('myApp',[])
         .controller('contactosController',['$scope', 'ContactosService',
         function($scope, ContactosService){
-        $scope.altaUsuario;
+            $scope.altaUsuario;
 
             $scope.alta = function() {
                 $scope.newUsuario = ContactosService.newUsuario();
