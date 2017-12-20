@@ -9,7 +9,13 @@ app.controller("PokemonController"
                     
                 }
             );
-            
+        $scope.addNewpoke = function(){
+            var info = {texto:"Saludo3", edad:"48"}; 
+            PokemonService.getSaludo().save({id:12},info).$promise.then(
+                    function(response){},
+                    function(response){}
+                    );
+        };    
     }]);
 
 
