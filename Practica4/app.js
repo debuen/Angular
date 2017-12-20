@@ -6,7 +6,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     'bot': { templateUrl: 'bot.html', controller: 'botController'} }
     })
     .state('app.suscrito', { url: 'suscritas',
-            views: { 'mid@': { templateUrl: 'listasSuscrito.html'},
+            views: { 'top@': { templateUrl: 'topListasSuscrito.html'},
+                     'mid@': { templateUrl: 'listasSuscrito.html'},
                      'bot@': {templateUrl: 'botListasSuscrito.html'}}
     });
     $urlRouterProvider.otherwise('/');
