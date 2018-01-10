@@ -5,14 +5,27 @@ session_start();
 if(isset($_SESSION["players"])){
     $players = $_SESSION["players"];
 }else{
-    $players = array("players"=>[array("texto"=>"Saludo", "edad"=>"33"), array("texto"=>"Saludo2", "edad"=>"22")]);
+    $players = array("players"=>
+        [array("texto"=>"Saludo", "edad"=>"33"),
+         array("texto"=>"Saludo2", "edad"=>"22")
+       ]
+        );
     $_SESSION["players"] = $players;
 }
 
 
 switch($_SERVER['REQUEST_METHOD']){
     CASE "GET":
-        echo json_encode($players);
+        //echo "AAAAAa";
+        $id = explode("/pokemons/", $_SERVER['REQUEST_URI']);
+     //   echo "::".$id[0]."::".sizeof($id)."--";
+        
+        
+        if(sizeof($id)>1){
+            echo json_encode($players["players"][$id[1]]);
+        }else{
+            echo json_encode($players);
+        }
         break;
     CASE "POST":
         $jsonPlayer = json_encode(file_get_contents("php://input"), false);
